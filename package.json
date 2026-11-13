@@ -3,15 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://egorrich.testSystem.github.io",	
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
     "test": "vitest run",
-    "report": "tsx scripts/report.ts"
+    "report": "tsx scripts/report.ts",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "jszip": "^3.10.2",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
